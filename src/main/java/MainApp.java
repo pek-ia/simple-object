@@ -7,17 +7,17 @@ public class MainApp {
         boolean bluetooth = true;
 
 
-        Headphones myEarBuds = new Headphones(myFavoriteBrand, newestModel, priceOnAmazon, bluetooth);
+        HeadphonesRecord myEarBuds = new HeadphonesRecord(myFavoriteBrand, newestModel, priceOnAmazon, bluetooth);
 
-        Headphones otherHeadset = new Headphones("ElCrummy", ".01", 4.00, false);
+        HeadphonesRecord otherHeadset = new HeadphonesRecord("Sound Effectia", "X-01", 4.00, false);
 
         printHeadphones(myEarBuds);
         printHeadphones(otherHeadset);
 
     }
 
-    static void printHeadphones(Headphones h){
+    static void printHeadphones(HeadphonesRecord h){
 
-        System.out.println(h.getBrand() + "has a new model! : " + h.getModel());
+        System.out.println(h.brand() + " has a new model! : " + h.model());
     }
 }
